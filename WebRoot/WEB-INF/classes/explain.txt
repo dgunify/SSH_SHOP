@@ -1,0 +1,8 @@
+1.数据库连接配置文件connect.xml
+	<property name="user" value="root" />用户名
+	<property name="password" value="root" />密码
+	连接地址(yd_db数据库名)
+	<driver-url>
+			jdbc:mysql://localhost:3306/yd_db?characterEncoding=utf-8
+	</driver-url>
+	

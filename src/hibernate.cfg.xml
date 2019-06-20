@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		
+		 <!-- 加载连接池的配置配置文件 -->
+	  	<property name="proxool.pool_alias">DBPool</property>
+	  	<property name="proxool.xml">connect.xml</property>
+	  	<property name="connection.provider_class">
+	  		org.hibernate.connection.ProxoolConnectionProvider
+	  	</property>
+		
+		 <!-- 输出 SQL to stdout -->
+	  
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="current_session_context_class">thread</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		
+		<!-- 实体 -->
+		<mapping class="com.yd.model.Manage" />
+		<mapping class="com.yd.model.Classify" />
+		<mapping class="com.yd.model.User" />
+		<mapping class="com.yd.model.Product" />
+		<mapping class="com.yd.model.Notice" />
+	    <mapping class="com.yd.model.OrderGoods" />
+	    <mapping class="com.yd.model.ShopCart" />
+		
+		
+		
+		
+	</session-factory>
+</hibernate-configuration>
